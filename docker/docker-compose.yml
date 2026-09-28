@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: enterprise_rag_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --save 60 1 --loglevel notice
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis-insight:
+    image: redis/redisinsight:latest
+    container_name: enterprise_rag_redisinsight
+    restart: always
+    ports:
+      - "5540:5540"
+    volumes:
+      - redis_insight_data:/db
+    depends_on:
+      - redis
+
+volumes:
+  redis_data:
+  redis_insight_data:

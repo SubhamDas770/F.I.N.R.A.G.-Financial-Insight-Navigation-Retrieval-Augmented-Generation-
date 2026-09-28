@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Environment Variables & Secrets
+.env
+
+# Data & Model Weights (Do not commit large binaries)
+data/raw/*
+data/processed/*
+data/vector_db/*
+data/fine_tuned_llama3/*
+data/fine_tuned_tinyllama/*
+data/*.pdf
+*.bin
+*.safetensors
+*.pth
+*.pt
+*.gguf
+
+# Keep folder structure in git
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/vector_db/.gitkeep
+!data/fine_tuned_tinyllama/.gitkeep
+
+# Docker & OS
+.DS_Store
+*.log
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

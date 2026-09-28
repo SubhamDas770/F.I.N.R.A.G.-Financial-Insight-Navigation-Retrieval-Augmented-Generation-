@@ -1,0 +1,41 @@
+# --- Core Deep Learning & PyTorch ---
+torch>=2.2.0
+torchvision
+torchaudio
+accelerate>=0.28.0
+
+# --- LLM Fine-Tuning & Quantization ---
+transformers>=4.40.0
+bitsandbytes>=0.43.0
+peft>=0.10.0
+trl>=0.8.0
+datasets>=2.18.0
+
+# --- RAG & Vector Search ---
+langchain>=0.1.15
+langchain-community>=0.0.32
+langchain-core>=0.1.42
+qdrant-client>=1.8.0
+sentence-transformers>=2.6.0
+pymupdf>=1.24.0
+pypdf>=4.0.0
+tiktoken>=0.6.0
+
+# --- Caching, Memory & Databases ---
+redis>=5.0.0
+redis-om>=0.2.0
+
+# --- User Interface & API ---
+gradio>=4.25.0
+fastapi>=0.110.0
+uvicorn>=0.28.0
+
+# --- Serverless Deployment & Ops ---
+modal>=0.62.0
+python-dotenv>=1.0.1
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# --- Evaluation & Observability ---
+ragas>=0.1.5
+trulens-eval>=0.27.0
